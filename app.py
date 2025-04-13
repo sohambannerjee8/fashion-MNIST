@@ -14,6 +14,7 @@ st.set_page_config(page_title="Fashion MNIST Clustering", layout="wide")
 st.title("Fashion MNIST Clustering Analysis")
 st.markdown("""
 This app performs K-means clustering on the Fashion MNIST dataset using both random and class-based initialization.
+
 It visualizes sample images, cluster centers, and clustering results.
 """)
 
