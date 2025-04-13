@@ -41,7 +41,7 @@ st.write(f"Working with sample of shape: {X_sample.shape}")
 
 # Visualize sample images
 st.header("Sample Images")
-fig, axes = plt.subplots(2, 5, figsize=(15, 6))
+fig, axes = plt.subplots(2, 5, figsize=(10, 6))
 for i, ax in enumerate(axes.flat):
     ax.imshow(X.iloc[i].values.reshape(28, 28), cmap='gray')
     ax.set_title(f"Class: {y.iloc[i]}")
