@@ -89,7 +89,7 @@ st.subheader("Cluster Centers")
 tab1, tab2 = st.tabs(["Random Initialization", "Class-Based Initialization"])
 
 with tab1:
-    fig, axes = plt.subplots(2, 5, figsize=(15, 6))
+    fig, axes = plt.subplots(2, 5, figsize=(9, 3))
     for i, ax in enumerate(axes.flat):
         ax.imshow(kmeans_random.cluster_centers_[i].reshape(28, 28), cmap='viridis')
         ax.set_title(f"Cluster {i}")
@@ -98,7 +98,7 @@ with tab1:
     st.pyplot(fig)
 
 with tab2:
-    fig, axes = plt.subplots(2, 5, figsize=(15, 6))
+    fig, axes = plt.subplots(2, 5, figsize=(9, 4))
     for i, ax in enumerate(axes.flat):
         ax.imshow(kmeans_class.cluster_centers_[i].reshape(28, 28), cmap='viridis')
         ax.set_title(f"Cluster {i}")
@@ -111,7 +111,7 @@ st.subheader("Sample Images from Each Cluster")
 tab1, tab2 = st.tabs(["Random Initialization", "Class-Based Initialization"])
 
 with tab1:
-    fig, axes = plt.subplots(10, 10, figsize=(15, 20))
+    fig, axes = plt.subplots(10, 10, figsize=(9, 14))
     for cluster_idx in range(10):
         cluster_samples = X_sample[clusters_random == cluster_idx]
         for i in range(10):
@@ -122,7 +122,7 @@ with tab1:
     st.pyplot(fig)
 
 with tab2:
-    fig, axes = plt.subplots(10, 10, figsize=(15, 20))
+    fig, axes = plt.subplots(10, 10, figsize=(9, 14))
     for cluster_idx in range(10):
         cluster_samples = X_sample[clusters_class == cluster_idx]
         for i in range(10):
